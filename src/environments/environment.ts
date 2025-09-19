@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    apiPath: 'http://localhost:3000/api',
+    apiPath: 'https://api-food-link.onrender.com/api',
   };  
