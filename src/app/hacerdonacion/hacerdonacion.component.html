@@ -1,0 +1,37 @@
+         
+            <div class="tabla-container">
+                <h2 class="header-donador">
+                    Donador
+                </h2>
+                <h3>📋 Lista de donaciones</h3>
+                <table class="tabla-donaciones">
+                  <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Kilos</th>
+                        <th>Quine pidio</th>
+                        <th>Quine recibe</th>
+                        <th>Entregado</th>
+                        <th>Fecha entrega</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let fila of listDonaciones">
+                        <td>{{fila.producto}}</td>
+                        <td>{{fila.kilos}}</td>
+                        <td *ngIf="!(fila.nombreQuienRecibe == '' || fila.nombreQuienRecibe == null)"><li *ngFor="let filaP of fila.quienPideList">{{filaP}}</li></td>
+                        <td *ngIf="(fila.nombreQuienRecibe == '' || fila.nombreQuienRecibe == null)"><li *ngFor="let filaP of fila.quienPideList">{{filaP}} <button class="btn-donar" (click)="hacerDonacion(fila.id,filaP)">Donar</button></li></td>
+                        <td>{{fila.nombreQuienRecibe}}</td>
+                        <td>{{fila.entregadoTexto}} <button class="btn-donar" *ngIf="!fila.entregado && !(fila.nombreQuienRecibe == '' || fila.nombreQuienRecibe == null)" class="btn-donar" (click)="hacerEntrega(fila.id)">Entregar</button></td>
+                        <td>{{fila.fechaEntrega}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="volver">
+                    <button class="btn-volver" (click)="volver()">⬅️</button>
+                  </div>
+              </div>
+
+  
+  

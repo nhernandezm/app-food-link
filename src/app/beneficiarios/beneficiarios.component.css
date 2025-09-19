@@ -1,0 +1,78 @@
+.tabla-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .tabla-container h3 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #007bff;
+  }
+  
+  .tabla-donaciones {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .tabla-donaciones thead {
+    background: #007bff;
+    color: white;
+  }
+  
+  .tabla-donaciones th, .tabla-donaciones td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tabla-donaciones tr:hover {
+    background: #f1f9ff;
+  }
+  
+  .badge {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .badge.verde {
+    background: #28a745;
+  }
+  
+  .badge.rojo {
+    background: #dc3545;
+  }
+
+  .btn-donar {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .btn-donar:hover {
+    background: #218838;
+  }
+
+  .header-beneficiario {
+    text-align: center;
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+  } 
+  

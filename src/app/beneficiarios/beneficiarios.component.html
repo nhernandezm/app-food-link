@@ -1,0 +1,33 @@
+  <div class="tabla-container">
+    <h2 class="header-beneficiario">👤 Beneficiario</h2>
+    <h3>📋 Lista de donaciones</h3>
+    <table class="tabla-donaciones">
+      <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Kilos</th>
+            <th>Quine donó</th>
+            <th>Quine pide</th>
+            <th>Quine recibe</th>
+            <th>Lo quiero</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fila of listDonaciones">
+            <td>{{fila.producto}}</td>
+            <td>{{fila.kilos}}</td>
+            <td>{{fila.quienDona}}</td>
+            <td *ngIf="!(fila.quienPide == '' || fila.quienPide == null)"><li *ngFor="let filaP of fila.quienPideList">{{filaP}}</li></td>
+            <td>{{fila.nombreQuienRecibe}}</td>
+            <td *ngIf="fila.nombreQuienRecibe == '' || fila.nombreQuienRecibe == null"><button class="btn-donar" (click)="pedirDonacion(fila.id)">Lo quiero</button></td>
+            <td *ngIf="!(fila.nombreQuienRecibe == '' || fila.nombreQuienRecibe == null)">Pedido asignado</td>
+        </tr>  
+      </tbody>
+    </table>
+
+    <div class="volver">
+        <button class="btn-volver" (click)="volver()">⬅️</button>
+      </div>
+  </div>
+
+
